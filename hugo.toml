@@ -3,4 +3,4 @@ locale = 'en-us'
 title = 'Lorok TM'
 theme = "ananke"
 [permalinks]
-  posts = '/:title/'
+  posts = '/:slug/'
