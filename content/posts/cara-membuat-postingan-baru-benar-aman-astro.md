@@ -10,11 +10,45 @@ tags = ['Astro', 'Content Collections', 'Markdown', 'MDX']
 author = 'Admin'
 +++
 
-... *(Langkah 1 & 2 panggah padha)* ...
+Setelah sebelumnya kita membahas cara membuat postingan baru di Hugo, sekarang saatnya kita berkenalan dengan saudara lakonnya, yaitu **Astro**. Sebagai framework web modern yang super cepat, Astro memiliki pendekatan yang sedikit berbeda namun sangat aman dalam mengelola artikel, yaitu menggunakan fitur **Content Collections**.
+
+Dengan metode yang benar, artikel Anda tidak hanya rapi secara struktur kode dan ramah SEO, tetapi juga terhindar dari risiko error saat proses pembangunan (*build*) di Vercel.
+
+Berikut adalah panduan lengkap cara membuat postingan baru di Astro dari nol dengan benar dan aman.
+
+---
+
+## Langkah 1: Memahami Struktur Folder Artikel di Astro
+
+Jika di Hugo artikel disimpan di folder `content/posts/`, maka di dalam proyek Astro (`astroku`), artikel masa kini idealnya disimpan di dalam folder **Content Collections**. 
+
+Struktur foldernya di komputer lokal Anda akan terlihat seperti ini:
+```text
+astroku/
+├── src/
+│   ├── content/
+│   │   └── blog/  <-- Tempat Anda menaruh file artikel
+│   │       ├── artikel-pertama.md
+│   │       └── tutorial-kedua.mdx
+```
+> **Catatan:** Anda bebas menamai folder di dalam `src/content/` tersebut (misalnya `blog`, `posts`, atau `artikel`), namun pastikan nama folder tersebut sudah didaftarkan di file konfigurasi `src/content/config.ts`.
+
+---
+
+## Langkah 2: Membuat File Konten (`.md` atau `.mdx`)
+
+Di dalam folder koleksi tersebut (misalnya folder `blog`), buat file baru dengan huruf kecil semua dan gunakan tanda hubung (`-`) sebagai pemisah, contohnya:  
+`cara-membuat-postingan-baru-benar-aman-astro.md`
+
+Astro secara bawaan mendukung dua format:
+* Gunakan **`.md`** jika artikel Anda hanya berisi tulisan tutorial dan gambar pasif (sangat direkomendasikan karena ringan).
+* Gunakan **`.mdx`** jika di tengah-tengah artikel Anda ingin menyisipkan komponen interaktif buatan sendiri (seperti tombol interaktif atau kalkulator).
+
+---
 
 ## Langkah 3: Mengisi Front Matter di Bagian Atas
 
-Sama seperti Hugo, Astro menggunakan Front Matter di bagian paling atas. Namun, di dalam proyek Astro, Anda **wajib menggunakan tanda hubung tiga (`---`)** sebagai pembatasnya karena Astro menggunakan format standar YAML.
+Sama seperti Hugo, Astro menggunakan Front Matter di bagian paling atas yang diapit tanda `---` (format YAML) atau `+++` (format TOML) sesuai dengan setelan skema koleksi Anda. 
 
 Berikut adalah contoh Front Matter standar Astro yang komplit dan aman untuk SEO:
 
@@ -31,7 +65,27 @@ author: 'Admin'
 ```
 
 ### Aturan Keamanan Front Matter Astro:
-1. **Validasi Skema (Schema):** Astro akan mengecek apakah data yang Anda masukkan sudah sesuai tipe datanya dengan yang diatur di `src/content/config.ts`. Jika Anda salah memasukkan format tanggal, Astro akan langsung memberikan peringatan error saat di-build.
+1. **Validasi Skema (Schema):** Astro akan mengecek apakah data yang Anda masukkan (seperti `title` atau `pubDate`) sudah sesuai tipe datanya dengan yang diatur di `src/content/config.ts`. Jika Anda salah memasukkan format tanggal, Astro akan langsung memberikan peringatan error saat di-build.
 2. **Kustom `slug`:** Secara bawaan, Astro akan membuat URL berdasarkan nama file. Namun, dengan memasang parameter `slug: '...'` di atas, Anda bisa memotong URL agar lebih ringkas dan nempel langsung di domain utama Vercel Anda.
 
-... *(Seteruse panggah padha)* ...
+---
+
+## Langkah 4: Menulis Isi Konten dan Proses Deploy
+
+Tulis isi artikel Anda tepat di bawah baris penutup Front Matter menggunakan simbol Markdown murni. Berbeda dengan Hugo, Astro **secara bawaan sudah aman** dalam merender konten teks, jadi Anda tidak perlu pusing memikirkan sakelar keamanan seperti *unsafe HTML*.
+
+Setelah selesai menulis di komputer lokal:
+1. Simpan file Anda.
+2. Lakukan perintah Git standar di terminal:
+   ```bash
+   git add .
+   git commit -m "menambah artikel tutorial astro"
+   git push origin main
+   ```
+3. **Kelebihan Vercel:** Begitu Anda melakukan `git push`, server Vercel akan otomatis mendeteksi, membaca koleksi konten Astro Anda, mendeteksi kustom slug, dan memperbarui situs online Anda (`astroku.vercel.app`) dalam hitungan detik!
+
+---
+
+## Kesimpulan
+
+Membuat postingan baru di Astro memberikan rasa aman ekstra berkat fitur **Content Collections** yang menjaga agar struktur data artikel tidak berantakan. Cukup pastikan penempatan file berada di folder `src/content/`, isi Front Matter dengan teliti, dan biarkan Vercel bekerja otomatis menyebarkan tulisan bermanfaat Anda ke internet. Selamat mencoba!
