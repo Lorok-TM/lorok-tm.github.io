@@ -18,10 +18,10 @@ Berikut adalah panduan lengkap dan terstruktur untuk melakukan verifikasi kepemi
 
 ## Langkah 1: Mendapatkan File Verifikasi dari Google Search Console
 
-1. Buka halaman resmi [Google Search Console](https://google.com).
+1. Buka halaman resmi [Google Search Console](https://search.google.com/search-console/).
 2. Masuk menggunakan akun Google Anda.
 3. Pilih tipe properti **Awalan URL (URL prefix)** di bagian kanan.
-4. Masukkan URL website Anda secara lengkap (Contoh: `https://github.io`).
+4. Masukkan URL website Anda secara lengkap (Contoh: `https://situsku.github.io`).
 5. Klik **Teruskan / Continue**.
 6. Pada opsi metode verifikasi yang muncul, pilih metode **File HTML** (Sangat Direkomendasikan).
 7. Unduh (*download*) file HTML resmi yang disediakan oleh Google (biasanya file tersebut bernama unik seperti `google456xyz.html`).
@@ -44,7 +44,7 @@ Karena beberapa tema Hugo tidak mendukung pemrosesan kode HTML mentah (shortcode
 > 
 > Jangan panik, hal ini terjadi karena sistem Git secara otomatis akan mengabaikan (*ignore*) folder yang kosong tanpa isi file sama sekali. 
 > 
-> **Solusinya:** Anda hanya perlu membuat folder baru bernama `static` secara manual di dalam direktori utama proyek Hugo Anda (sejajar dengan folder `content`). Setelah folder dibuat, langsung masukkan file verifikasi HTML dari Google tersebut ke dalamnya (Struktur: `static/google12345.html`). Begitu folder `static` sudah berisi file, sistem Git akan langsung mendeteksinya dan folder tersebut akan muncul di GitHub setelah Anda melakukan *push*.
+> **Solusinya:** Anda hanya perlu membuat folder baru bernama `static` secara manual di dalam direktori utama proyek Hugo Anda (sejajar dengan folder `content`). Setelah folder dibuat, langsung masukkan file verifikasi HTML dari Google tersebut ke dalamnya (Struktur: `static/google12345.html`), ganti kodenya google12345.html menggunakan milik Anda. Begitu folder `static` sudah berisi file, sistem Git akan langsung mendeteksinya dan folder tersebut akan muncul di GitHub setelah Anda melakukan *push*.
 
 ---
 
