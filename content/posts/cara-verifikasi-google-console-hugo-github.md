@@ -1,7 +1,7 @@
 +++
 title = 'Cara Verifikasi Google Search Console di Situs Hugo + GitHub Pages'
 slug = 'cara-verifikasi-google-console-hugo-github'
-date = 2026-09-08T00:12:00+07:00
+date = 2026-09-09T00:01:00Z
 draft = false
 description = 'Panduan lengkap dan terstruktur untuk melakukan verifikasi kepemilikan Google Search Console pada website berbasis Hugo dan GitHub Pages.'
 summary = 'Ingin website Hugo Anda terindeks di Google? Simak panduan lengkap verifikasi Google Search Console menggunakan metode yang paling praktis.'
