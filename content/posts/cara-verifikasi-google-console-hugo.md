@@ -7,7 +7,7 @@ description = "Panduan lengkap dan terstruktur untuk melakukan verifikasi kepemi
 summary = "Ingin website Hugo Anda terindeks di Google? Simak panduan lengkap verifikasi Google Search Console menggunakan metode yang paling praktis."
 categories = ["Tutorial", "Web Development"]
 tags = ["Hugo", "GitHub Pages", "SEO", "Google Search Console"]
-author = ""
+author = "Admin"
 +++
 
 Menghubungkan website berbasis **Hugo dan GitHub Pages** ke **Google Search Console (GSC)** merupakan langkah krusial agar seluruh konten Anda dapat diindeks oleh mesin pencari Google. Dengan demikian, website Anda dapat muncul pada halaman hasil pencarian.
