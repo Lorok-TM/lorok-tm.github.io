@@ -1,13 +1,13 @@
 +++
-title = "Cara Verifikasi Google Search Console di Situs Hugo + GitHub Pages"
-slug = "cara-verifikasi-google-console-hugo"
+title = 'Cara Verifikasi Google Search Console di Situs Hugo + GitHub Pages'
+slug = 'cara-verifikasi-google-console-hugo'
 date = 2026-09-08T20:12:00+07:00
 draft = false
-description = "Panduan lengkap dan terstruktur untuk melakukan verifikasi kepemilikan Google Search Console pada website berbasis Hugo dan GitHub Pages."
-summary = "Ingin website Hugo Anda terindeks di Google? Simak panduan lengkap verifikasi Google Search Console menggunakan metode yang paling praktis."
-categories = ["Tutorial", "Web Development"]
-tags = ["Hugo", "GitHub Pages", "SEO", "Google Search Console"]
-author = "Admin"
+description = 'Panduan lengkap dan terstruktur untuk melakukan verifikasi kepemilikan Google Search Console pada website berbasis Hugo dan GitHub Pages.'
+summary = 'Ingin website Hugo Anda terindeks di Google? Simak panduan lengkap verifikasi Google Search Console menggunakan metode yang paling praktis.'
+categories = ['Tutorial', 'Web Development']
+tags = ['Hugo', 'GitHub Pages', 'SEO', 'Google Search Console']
+author = 'Admin'
 +++
 
 Menghubungkan website berbasis **Hugo dan GitHub Pages** ke **Google Search Console (GSC)** merupakan langkah krusial agar seluruh konten Anda dapat diindeks oleh mesin pencari Google. Dengan demikian, website Anda dapat muncul pada halaman hasil pencarian.
