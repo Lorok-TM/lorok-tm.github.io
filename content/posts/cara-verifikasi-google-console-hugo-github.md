@@ -39,6 +39,13 @@ Karena beberapa tema Hugo tidak mendukung pemrosesan kode HTML mentah (shortcode
    * *Struktur jalurnya akan menjadi seperti ini: `proyek-hugo/static/google456xyz.html`*
 4. Simpan perubahan, lalu lakukan proses **Git Commit** dan **Git Push** repositori Anda ke GitHub.
 
+> **Catatan Penting Pengalaman Penulis (Tips Mengatasi Folder `static` yang Hilang):**
+> Saat pertama kali memeriksa repositori di GitHub, Anda mungkin akan menyadari bahwa folder `static` (yang berada di luar folder `themes`) **tidak muncul atau tidak kelihatan sama sekali**. 
+> 
+> Jangan panik, hal ini terjadi karena sistem Git secara otomatis akan mengabaikan (*ignore*) folder yang kosong tanpa isi file sama sekali. 
+> 
+> **Solusinya:** Anda hanya perlu membuat folder baru bernama `static` secara manual di dalam direktori utama proyek Hugo Anda (sejajar dengan folder `content`). Setelah folder dibuat, langsung masukkan file verifikasi HTML dari Google tersebut ke dalamnya (Struktur: `static/google12345.html`). Begitu folder `static` sudah berisi file, sistem Git akan langsung mendeteksinya dan folder tersebut akan muncul di GitHub setelah Anda melakukan *push*.
+
 ---
 
 ## Langkah 3: Melakukan Konfirmasi Verifikasi
