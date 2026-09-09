@@ -48,9 +48,9 @@ Astro secara bawaan mendukung dua format:
 
 ## Langkah 3: Mengisi Front Matter di Bagian Atas
 
-Sama seperti Hugo, Astro menggunakan Front Matter di bagian paling atas yang diapit tanda `---` (format YAML) atau `+++` (format TOML) sesuai dengan setelan skema koleksi Anda. 
+Berbeda dengan Hugo yang super fleksibel, di dalam proyek Astro Anda **WAJIB HUKUMNYA** menggunakan Front Matter yang diapit oleh tanda hubung tiga (`---`) atau format YAML. Ingat, Astro sama sekali tidak mendukung format tanda plus (`+++` atau TOML) untuk file kontennya. Jika Anda nekat menggunakan `+++`, proses build di Vercel dijamin akan langsung mbledos (error).
 
-Berikut adalah contoh Front Matter standar Astro yang komplit dan aman untuk SEO:
+Berikut adalah contoh struktur Front Matter standar Astro yang komplit, aman, dan sudah lolos validasi skema SEO:
 
 ```yaml
 ---
@@ -64,9 +64,9 @@ author: 'Admin'
 ---
 ```
 
-### Aturan Keamanan Front Matter Astro:
-1. **Validasi Skema (Schema):** Astro akan mengecek apakah data yang Anda masukkan (seperti `title` atau `pubDate`) sudah sesuai tipe datanya dengan yang diatur di `src/content/config.ts`. Jika Anda salah memasukkan format tanggal, Astro akan langsung memberikan peringatan error saat di-build.
-2. **Kustom `slug`:** Secara bawaan, Astro akan membuat URL berdasarkan nama file. Namun, dengan memasang parameter `slug: '...'` di atas, Anda bisa memotong URL agar lebih ringkas dan nempel langsung di domain utama Vercel Anda.
+### Aturan Ketat Front Matter Astro:
+1. **Validasi Skema (Schema):** Astro akan memverifikasi apakah data yang Anda masukkan (seperti `title` atau `pubDate`) sudah sesuai dengan aturan yang didaftarkan pada file `src/content/config.ts`. Salah mengetik format atau tipe data akan membuat web gagal di-deploy.
+2. **Kustom `slug`:** Secara default, Astro mencetak URL berdasarkan nama file `.md` Anda. Dengan memasang kustom `slug: '...'` di atas, Anda bisa memotong URL agar langsung nempel rapi di belakang domain utama Vercel Anda tanpa embel-embel nama folder yang panjang.
 
 ---
 
